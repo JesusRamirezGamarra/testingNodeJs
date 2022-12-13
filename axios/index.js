@@ -19,11 +19,11 @@ request_02()// get products Search Product by name
 describe("Products Testing", () => {
 describe("GETS", () => {
     it("the base request should return 200", async () => {
-    let response = await requester.get("/api/products");
+    let response = await requester.get("/api/product");
     expect(response.status).to.be.equals(200);
     });
     it("should return an array of products", async () => {
-    let response = await requester.get("/api/products");
+    let response = await requester.get("/api/product");
     const { _body } = response;
     expect(_body).to.be.an("array");
     });
@@ -48,7 +48,7 @@ describe("PUTS", () => {
 describe("User Testing", () => {
 describe("GETS", () => {
     it("Return 200", async () => {
-    let response = await requester.get("/api/users");
+    let response = await requester.get("/api/user");
     const { _body } = response;
     expect(response.status).to.be.equals(200);
     });
